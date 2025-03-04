@@ -1,0 +1,111 @@
+.title {
+    /* Заявки на размещение вакансий */
+
+    position: absolute;
+    width: 584px;
+    height: 43px;
+    left: 150px;
+    top: 119px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 120%;
+    /* or 43px */
+
+    color: #4C73E3;
+
+
+}
+
+.main_container {
+    /* cards */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+
+    position: absolute;
+    width: 1300px;
+    height: 478px;
+    left: 150px;
+    top: 218px;
+
+
+}
+
+.container1 {
+    /* card */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 28px;
+    gap: 28px;
+
+    width: 1300px;
+    height: 146px;
+
+    background: #FFFFFF;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.container2 {
+    /* card */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 28px;
+    gap: 28px;
+
+    width: 1300px;
+    height: 146px;
+
+    background: #FFFFFF;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+
+}
+
+.container3 {
+    /* card */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 28px;
+    gap: 28px;
+
+    width: 1300px;
+    height: 146px;
+
+    background: #FFFFFF;
+    border-radius: 16px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    align-self: stretch;
+    flex-grow: 0;
+
+}

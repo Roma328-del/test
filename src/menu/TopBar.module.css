@@ -1,0 +1,148 @@
+.AllBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 150px;
+    gap: 739px;
+
+    position: absolute;
+    width: 1600px;
+    height: 71px;
+    left: 0px;
+    top: 0px;
+
+    background: #4C73E3;
+
+}
+
+.ellipse {
+
+    width: 31px;
+    height: 31px;
+
+    background: #FFFFFF;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+
+}
+
+.button1_pressed {
+    /* Menu */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 10px;
+
+    width: 136px;
+    height: 71px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    background: #88A4F5;
+
+}
+
+
+.button1 {
+    /* Menu */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 10px;
+
+    width: 136px;
+    height: 71px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    background: #4C73E3;
+
+}
+
+.button2 {
+    /* Menu */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 10px;
+
+    width: 190px;
+    height: 71px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+    background: #4C73E3;
+
+}
+
+.button2_pressed {
+    /* Menu */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 10px;
+
+    width: 190px;
+    height: 71px;
+
+    background: #88A4F5;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+}
+
+.buttons {
+    /* Menu */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+
+    width: 326px;
+    height: 71px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
