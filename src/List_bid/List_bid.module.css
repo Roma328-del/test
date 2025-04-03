@@ -38,7 +38,7 @@
 
 }
 
-.container1 {
+.container {
     /* card */
 
     /* Auto layout */
@@ -49,9 +49,9 @@
     gap: 28px;
 
     width: 1300px;
-    height: 146px;
+    height: 400px;
 
-    background: #FFFFFF;
+    background: #ff0000;
     border-radius: 16px;
 
     /* Inside auto layout */
@@ -60,52 +60,45 @@
     align-self: stretch;
     flex-grow: 0;
 
-}
-
-.container2 {
-    /* card */
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 28px;
-    gap: 28px;
-
-    width: 1300px;
-    height: 146px;
-
-    background: #FFFFFF;
-    border-radius: 16px;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+    /*нет относительной позиции*/
 
 }
 
-.container3 {
-    /* card */
+.bid_container {
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
 
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 16px 28px;
-    gap: 28px;
+.appointment {
+    /* position: relative;
+    left: 0%;
+    top: 0%;
+    width: 30%; */
+}
 
-    width: 1300px;
-    height: 146px;
+.naming_vacation {
+    /* position: relative;
+    left: 30%;
+    top: 0%;
+    width: 30%; */
+}
 
-    background: #FFFFFF;
-    border-radius: 16px;
+.date_closed {
+    /* position: relative;
+    left: 60%;
+    top: 0%;
+    width: 30%; */
 
-    /* Inside auto layout */
-    flex: none;
-    order: 2;
-    align-self: stretch;
-    flex-grow: 0;
+}
 
+.change_bid {
+    position:relative;
+    top: 0%;
+    left: 90%;
+    width: 10%;
+    text-align: center;
 }

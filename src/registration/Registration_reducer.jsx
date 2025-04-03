@@ -20,4 +20,4 @@ let Registration_reducer = (state = initial_state, action) => {
 }
 
 
-export default Registration_reducer
+export default Registration_reducer;

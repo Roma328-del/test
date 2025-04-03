@@ -41,7 +41,7 @@ function TopBar() {
               className={styles.label1}
               onClick={() => {
                 change_color(1);
-                navigate('/list_bids')
+                navigate('/bids')
               }}>Все заявки</label>
           </div>)}
 
@@ -51,7 +51,7 @@ function TopBar() {
               className={styles.label1}
               onClick={() => {
                 change_color(1);
-                navigate('/list_bids');
+                navigate('/bids');
               }}>Все заявки</label>
           </div>)}
 
@@ -61,7 +61,7 @@ function TopBar() {
               className={styles.label2}
               onClick={() => {
                 change_color(2);
-                navigate('./registration');
+                navigate('/registration');
               }}>Создание заявки</label>
           </div>)}
 
@@ -71,7 +71,7 @@ function TopBar() {
               className={styles.label2}
               onClick={() => {
                 change_color(2);
-                navigate('./registration');
+                navigate('/registration');
               }}>Создание заявки</label>
           </div>)}
         </div>
