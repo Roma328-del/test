@@ -18,9 +18,19 @@ const Registration = (props) => {
 
     const { register, handleSubmit } = useForm()
     const onSubmit = (data) => {
-        API.AddBid(data['APPOINTMENT'], data['NAMING_VACATION'], data['DEPARTMENT'],
-            date_open, date_closed, ref0.current.value, gender).then(res => console.log(res));
-        navigate(`/bids`);
+        console.log(location.state?.item)
+        if (location.state?.item) {
+            console.log('CHANGE')
+            API.ChangeBid(location.state?.item.id, data['APPOINTMENT'], data['NAMING_VACATION'], data['DEPARTMENT'],
+                date_open, date_closed, ref0.current.value, gender).then(res => console.log(res));
+            navigate(`/bids`);
+        }
+        else {
+            console.log('NEW')
+            API.AddBid(data['APPOINTMENT'], data['NAMING_VACATION'], data['DEPARTMENT'],
+                date_open, date_closed, ref0.current.value, gender).then(res => console.log(res));
+            navigate(`/bids`);
+        }
     }
 
     const ref0 = React.createRef();
@@ -37,17 +47,17 @@ const Registration = (props) => {
                                 <label className={styles.appointment}>Наименование должности
 
                                 </label>
-                                <input defaultValue={location.state.item.appointment} {...register('APPOINTMENT', { required: true })} className={styles.appointment_input} type="text" />
+                                <input defaultValue={location.state?.item.appointment} {...register('APPOINTMENT', { required: true })} className={styles.appointment_input} type="text" />
                             </div>
 
                             <div className={styles.first_container1_2}>
                                 <label className={styles.naming_vacation}>Наименование вакансии*</label>
-                                <input defaultValue={location.state.item.naming_vacation} {...register('NAMING_VACATION', { required: true })} className={styles.naming_vacation_input} type="text" />
+                                <input defaultValue={location.state?.item.naming_vacation} {...register('NAMING_VACATION', { required: true })} className={styles.naming_vacation_input} type="text" />
                             </div>
 
                             <div className={styles.first_container1_3}>
                                 <label className={styles.department}>Отдел*</label>
-                                <input defaultValue={location.state.item.department} {...register('DEPARTMENT', { required: true })} className={styles.department_input} type="text" />
+                                <input defaultValue={location.state?.item.department} {...register('DEPARTMENT', { required: true })} className={styles.department_input} type="text" />
                             </div>
                         </div>
 
@@ -93,7 +103,7 @@ const Registration = (props) => {
                                         </button>}
                                         {
                                             (gender === 'Мужской') && <button
-                                                type="buttcdscscaon"
+                                                type="button"
                                                 onClick={() => {
                                                     SetGender('Мужской');
                                                 }}

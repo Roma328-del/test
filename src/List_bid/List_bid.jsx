@@ -6,8 +6,9 @@ import { GetUsersCR, SetUsersCR } from "./List_bid_reducer"
 import { useNavigate } from "react-router-dom"
 const List_bid = (props) => {
     const main_ref = useRef(true);
-    const [isUpdate, setUpdate] = useState(null)
+    const [isUpdate, setUpdate] = useState(null);
     const navigate = useNavigate();
+    let i = 0;
 
     useEffect(() => {
         if (main_ref.current) {
@@ -27,20 +28,21 @@ const List_bid = (props) => {
     return (
         <>
             <label className={styles.title}>Заявки на размещение вакансий</label>
-            <div className={styles.main_container}>
+            <div className={styles.main_container} >
                 {
                     (isUpdate && (
                         props.Users.map(item => {
                             console.log(item)
                             return <div key={item.id} className={styles.container}>
-                                <button onClick={() => {
-                                    navigate(`/change_bid`, { state: { item } });
-
-
-
-
-                                }
-                                } className={styles.change_bid}>Изменить заявку</button>
+                                <div className={styles.button_group}>
+                                    <button onClick={() => {
+                                        navigate(`/change_bid`, { state: { item } });
+                                    }
+                                    } className={styles.change_bid}>Изменить заявку</button>
+                                    <button onClick={() => {
+                                        API.DeleteBid(item.id).then(res => res)
+                                    }} className={styles.delete_bid}>Удалить заявку</button>
+                                </div>
                                 <label className={styles.id}>id:{item.id}</label>
                                 <label className={styles.appointment}>appointment:{item.appointment}</label>
                                 <label className={styles.naming_vacation}>naming_vacation:{item.naming_vacation}</label>
@@ -53,10 +55,6 @@ const List_bid = (props) => {
                             </div>
                         })
                     ))
-
-
-
-
                 }
             </div >
 

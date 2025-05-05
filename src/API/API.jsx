@@ -17,11 +17,11 @@ export const API = {
     GetBids: (page, count) => {
         return instance.get(`/bids`);
     },
-    ChangeBid: (id, appointment, naming_vacation, deparment,
-        data_open, data_closed, education, gender) => {
-        return instance.post(`/change_data/${id}`, {
-            appointment, naming_vacation, deparment,
-            data_open, data_closed, education, gender
+    ChangeBid: (id, appointment, naming_vacation, department,
+        date_open, date_closed, education, gender) => {
+        return instance.post('/change_data', {
+            id, appointment, naming_vacation, department,
+            date_open, date_closed, education, gender
         })
     }
 }
